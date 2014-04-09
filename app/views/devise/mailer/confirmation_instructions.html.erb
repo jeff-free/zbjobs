@@ -1,0 +1,5 @@
+<p>您好，<%= @email %>!</p>
+
+<p>請透過以下連結，進行 Email 認證</p>
+
+<p><%= link_to 'Email 認證連結', confirmation_url(@resource, :confirmation_token => @token) %></p>

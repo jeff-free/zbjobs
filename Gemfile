@@ -20,7 +20,9 @@ gem "ckeditor"
 
 group :development do
   gem 'annotate'
+  gem 'letter_opener'
 end
+
 # gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

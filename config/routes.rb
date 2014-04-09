@@ -1,8 +1,10 @@
 Zbjobs::Application.routes.draw do
-  devise_for :companies
+  devise_for :companies, :controllers => {:registrations => "registrations", :sessions => "sessions"}
 
   resources :jobs
+  get '/about' => 'pages#about'
   root 'jobs#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
