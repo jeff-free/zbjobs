@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409040641) do
+ActiveRecord::Schema.define(version: 20140409064917) do
 
   create_table "companies", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20140409040641) do
     t.integer  "salary_from"
     t.integer  "salary_to"
     t.integer  "annual_salary"
-    t.integer  "how_to_apply"
+    t.text     "how_to_apply"
   end
 
   create_table "skills", force: true do |t|

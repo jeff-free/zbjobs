@@ -1,0 +1,17 @@
+<%= simple_form_for @job do |f| %>
+  <%= f.input :name, label: "工作職稱" %>
+  <%= f.input :skill, collection: @skills, label_method: :name, value_method: :id, label: "技能", include_blank: false %>
+  <%= f.input :description, label: "工作內容" %>
+  <%= f.input :requirement, label:"工作需求" %>
+  <%= f.input :link, label: "相關網站" %>
+  <div class="row">
+    <div class="large-2 columns"><span>薪資範圍：</span></div>
+    <div class="large-2 columns"><%= f.input :salary_from, label: false, placeholder: "月薪最低" %></div>
+    <div class="large-2 columns"> ~ </div>
+    <div class="large-2 columns"><%= f.input :salary_to, label: false, placeholder: "月薪最高" %></div>
+    <div class="large-2 columns">年薪可達：</div>
+    <div class="large-2 columns"><%= f.input :annual_salary, label: false %></div>
+  </div>
+  <%= f.input :how_to_apply, label: "應徵方式" %>
+  <%= f.submit class: "button" %>
+<% end %>

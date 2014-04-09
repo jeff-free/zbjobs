@@ -18,14 +18,8 @@
 #  how_to_apply  :integer
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  description: 
-  requirement: 
-
-two:
-  name: MyString
-  description: 
-  requirement: 
+class Job < ActiveRecord::Base
+  belongs_to :company
+  belongs_to :industry
+  belongs_to :skill
+end

@@ -6,6 +6,7 @@ gem 'rails', '4.0.3'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
 gem 'better_errors'
+gem 'simple_form'
 gem 'foundation-rails'
 gem 'font-awesome-sass'
 gem 'sass-rails', '~> 4.0.0'

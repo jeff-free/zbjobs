@@ -15,6 +15,9 @@
         <li class="has-dropdown">
           <a href="#">技能分類</a>
           <ul class="dropdown">
+            <% @skills.each do |skill| %>
+              <li><a><%= skill.name %></a></li>
+            <% end %>
           </ul>
         </li>
       </ul>
