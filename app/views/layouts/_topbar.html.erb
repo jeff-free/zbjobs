@@ -19,9 +19,10 @@
         </li>
       </ul>
     <ul class="right">
+      <li><%= link_to("關於我們", page_path('about'))  %></li>
       <% if current_company %>
         <li>
-          <%= link_to("登出", destroy_company_session_path)  %>
+          <%= link_to("登出", destroy_company_session_path, method: :delete)  %>
         </li>
       <% else %>
         <li>

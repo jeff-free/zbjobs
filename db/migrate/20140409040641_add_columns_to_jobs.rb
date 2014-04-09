@@ -7,3 +7,4 @@ class AddColumnsToJobs < ActiveRecord::Migration
     add_column :jobs, :how_to_apply, :integer
   end
 end
+  

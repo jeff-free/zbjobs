@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'high_voltage'
+gem "kaminari"
+gem "ckeditor"
 
 group :development do
   gem 'annotate'
