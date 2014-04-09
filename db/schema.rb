@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408130304) do
+ActiveRecord::Schema.define(version: 20140409040641) do
 
   create_table "companies", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -29,15 +29,37 @@ ActiveRecord::Schema.define(version: 20140408130304) do
     t.string   "phone"
     t.integer  "scale"
     t.string   "industry"
+    t.integer  "industry_id"
   end
 
   add_index "companies", ["email"], name: "index_companies_on_email", unique: true, using: :btree
   add_index "companies", ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true, using: :btree
 
+  create_table "industries", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "jobs", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.text     "requirement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "industry_id"
+    t.integer  "skill_id"
+    t.integer  "company_id"
+    t.string   "link"
+    t.integer  "salary_from"
+    t.integer  "salary_to"
+    t.integer  "annual_salary"
+    t.integer  "how_to_apply"
+  end
+
+  create_table "skills", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,37 @@
+<div class="sticky">
+  <nav class="top-bar" data-topbar data-options="sticky_on: large">
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to("太陽花世代就職網", root_path)  %></h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="has-dropdown">
+          <a href="#">產業分類</a>
+          <ul class="dropdown">
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">技能分類</a>
+          <ul class="dropdown">
+          </ul>
+        </li>
+      </ul>
+    <ul class="right">
+      <% if current_company %>
+        <li>
+          <%= link_to("登出", destroy_company_session_path)  %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to("註冊", new_company_registration_path) %>
+        </li>
+        <li>
+          <%= link_to("登入", new_company_session_path)  %>
+        </li>
+      <% end %>
+    </ul>
+    </section>
+  </nav>
+</div>
