@@ -5,6 +5,14 @@ class RegistrationsController < Devise::RegistrationsController
     super
   end
 
+  def create
+    super
+  end
+
+  # def after_sign_up_path_for(resource)
+  #   edit_company_path(resource)
+  # end
+
   def get_skills
     @skills = Skill.all
   end

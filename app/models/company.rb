@@ -19,6 +19,10 @@
 #  scale                  :integer
 #  industry               :string(255)
 #  industry_id            :integer
+#  confirmation_token     :string(255)
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
+#  unconfirmed_email      :string(255)
 #
 
 class Company < ActiveRecord::Base
@@ -28,4 +32,10 @@ class Company < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :industry
   has_many :jobs
+
+  def check_info_done?
+    if self.name.present? && self.address.present?
+      true
+    end
+  end
 end

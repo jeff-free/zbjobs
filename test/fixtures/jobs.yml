@@ -15,7 +15,7 @@
 #  salary_from   :integer
 #  salary_to     :integer
 #  annual_salary :integer
-#  how_to_apply  :integer
+#  how_to_apply  :text
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

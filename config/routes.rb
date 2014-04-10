@@ -1,6 +1,7 @@
 Zbjobs::Application.routes.draw do
   devise_for :companies, :controllers => {:registrations => "registrations", :sessions => "sessions"}
 
+  resources :companies
   resources :jobs
   get '/about' => 'pages#about'
   root 'jobs#index'
