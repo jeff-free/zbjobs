@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409095957) do
+ActiveRecord::Schema.define(version: 20140411025838) do
 
   create_table "companies", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20140409095957) do
     t.text     "requirement"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "industry_id"
     t.integer  "skill_id"
     t.integer  "company_id"
     t.string   "link"

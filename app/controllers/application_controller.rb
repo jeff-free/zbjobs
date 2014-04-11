@@ -5,4 +5,8 @@ class ApplicationController < ActionController::Base
   def get_skills
     @skills = Skill.all
   end
+
+  def get_industries
+    @industries = Industry.all
+  end
 end

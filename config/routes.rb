@@ -3,6 +3,11 @@ Zbjobs::Application.routes.draw do
 
   resources :companies
   resources :jobs
+  resources :industries do
+    resources :jobs
+  end
+
+  
   get '/about' => 'pages#about'
   root 'jobs#index'
 
