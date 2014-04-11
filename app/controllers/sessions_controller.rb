@@ -1,5 +1,6 @@
 class SessionsController < Devise::SessionsController
   before_action :get_skills
+  before_action :get_industries
 
   def after_sign_in_path_for(resource)
 

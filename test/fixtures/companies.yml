@@ -16,8 +16,6 @@
 #  name                   :string(255)
 #  address                :string(255)
 #  phone                  :string(255)
-#  scale                  :integer
-#  industry               :string(255)
 #  industry_id            :integer
 #  confirmation_token     :string(255)
 #  confirmed_at           :datetime

@@ -1,7 +1,8 @@
 class JobsController < ApplicationController
-  before_action :find_job, only: [:show, :edit, :update, :destroy]
   before_action :get_company
   before_action :get_skills
+  before_action :get_industries
+  before_action :find_job, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_company!, only: [:create, :edit, :new, :update, :destroy]
   def index
     @jobs = Job.all

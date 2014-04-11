@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   before_action :get_skills
+  before_action :get_industries
 
   def new
     super

@@ -1,0 +1,4 @@
+<h1><%= @skill.name %></h1>
+<% @jobs.each do |job| %>
+  <%= link_to(job.name, job_path(job)) %>
+<% end %>

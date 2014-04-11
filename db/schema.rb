@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140411025838) do
+ActiveRecord::Schema.define(version: 20140411041347) do
 
   create_table "companies", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,8 +27,6 @@ ActiveRecord::Schema.define(version: 20140411025838) do
     t.string   "name"
     t.string   "address"
     t.string   "phone"
-    t.integer  "scale"
-    t.string   "industry"
     t.integer  "industry_id"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"

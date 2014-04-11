@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :get_skills
+  before_action :get_industries
   before_action :find_company, only: [:show, :edit, :update, :destroy]
   def show
   end
@@ -16,7 +17,7 @@ class CompaniesController < ApplicationController
   private
 
   def find_company
-    @comapny = Company.find(params[:id])
+    @company = Company.find(params[:id])
   end
 
   def company_params

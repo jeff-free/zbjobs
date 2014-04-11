@@ -19,7 +19,7 @@
           <a href="#">技能分類</a>
           <ul class="dropdown">
             <% @skills.each do |skill| %>
-              <li><a><%= skill.name %></a></li>
+              <li><%= link_to(skill.name, skill_path(skill))  %></li>
             <% end %>
           </ul>
         </li>
