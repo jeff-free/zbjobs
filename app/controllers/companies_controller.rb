@@ -3,6 +3,7 @@ class CompaniesController < ApplicationController
   before_action :get_industries
   before_action :find_company, only: [:show, :edit, :update, :destroy]
   def show
+    @jobs = @company.jobs
   end
 
   def edit
@@ -10,7 +11,7 @@ class CompaniesController < ApplicationController
 
   def update
     if @company.update(company_params)
-      redirect_to :root_path
+      redirect_to root_path
     end
   end
 
@@ -21,6 +22,6 @@ class CompaniesController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit!
+    params.require(:company).permit(:name, :address, :phone)
   end
 end

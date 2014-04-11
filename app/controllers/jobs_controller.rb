@@ -26,7 +26,7 @@ class JobsController < ApplicationController
 
   private 
 
-  def find_job
+  def find_job  
     @job = Job.find(params[:id])
     
   end

@@ -2,7 +2,7 @@
   <nav class="top-bar" data-topbar data-options="sticky_on: large">
     <ul class="title-area">
       <li class="name">
-        <h1><%= link_to("太陽花世代就職網", root_path)  %></h1>
+        <h1><%= link_to("來來來徵才網", root_path)  %></h1>
       </li>
     </ul>
     <section class="top-bar-section">
@@ -27,9 +27,8 @@
     <ul class="right">
       <li><%= link_to("關於我們", about_path) %></li>
       <% if current_company %>
-        <li>
-          <%= link_to("登出", destroy_company_session_path, method: :delete)  %>
-        </li>
+        <li><%= link_to("張貼工作", new_job_path)  %></li>
+        <li><%= link_to("登出", destroy_company_session_path, method: :delete)  %></li>
       <% else %>
         <li>
           <%= link_to("註冊", new_company_registration_path) %>

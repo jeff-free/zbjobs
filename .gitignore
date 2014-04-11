@@ -17,7 +17,7 @@ config/config.yml
 
 zbjobs.sublime-project
 zbjobs.sublime-workspace
-zbjobs.pem
+zbjob.pem
 
 ## Environment normalisation:
 /.bundle

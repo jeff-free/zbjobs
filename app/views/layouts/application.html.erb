@@ -14,9 +14,8 @@
 
   <body>
     <%= render partial: "layouts/topbar" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="row">
+    <%= render 'layouts/messages' %>
+    <div class="content">
 
     <%= yield %>
     </div>
