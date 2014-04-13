@@ -38,8 +38,9 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-gem 'capistrano'
+gem 'capistrano', '~> 2.15.5'
 gem 'capistrano-ext'
+gem "rvm-capistrano"
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 

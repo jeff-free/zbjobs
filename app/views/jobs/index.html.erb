@@ -1,5 +1,8 @@
-<ul>
-  <% @jobs.each do |job|%>
-    <li><%= link_to(job.name, job_path(job))%></li>
-  <% end %>
-</ul>
+<% @jobs.each do |job|%>
+  <div class="row">
+    <div class="large-3 columns">
+      <h3><%= link_to(job.name, job_path(job))%></h3>
+      <h3><small><%= link_to(job.company_name, job_path(job))  %></small></h3>
+    </div>
+  </div>
+<% end %>

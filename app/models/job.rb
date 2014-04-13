@@ -20,5 +20,8 @@
 class Job < ActiveRecord::Base
   belongs_to :company
   belongs_to :skill
-
+  
+  def company_name
+    company.name
+  end
 end
