@@ -4,7 +4,7 @@ class IndustriesController < ApplicationController
   before_action :find_industry
 
   def show
-    @jobs = @industry.jobs
+    @jobs = @industry.jobs.page(params[:pages])
   end
 
   def find_industry

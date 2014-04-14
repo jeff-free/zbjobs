@@ -1,6 +1,16 @@
 <h1><%= @company.name %></h1>
-<ul>
-  <li><% @jobs.each do |job| %>
-    <%= link_to(job.name, job_path(job)) %>
-  <% end %></li>
-</ul>
+<h3>公司地址:<%= @company.address %></h3>
+<h3>聯絡電話:<%= @company.phone %></h3>
+<h3>產業類別:<%= @company.industry %></h3>
+<hr/>
+<div class="content">
+  <% @jobs.each do |job|%>
+    <div class="content">
+      <div class="large-3 columns">
+        <h2 class="job_title"><%= link_to(job.name, job_path(job))%></h2>
+        <h4 class="company_title"><small><%= link_to(job.company_name, job_path(job))  %></small></h4>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate @jobs %>
+</div>

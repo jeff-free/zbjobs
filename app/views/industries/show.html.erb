@@ -1,6 +1,10 @@
 <h1><%= @industry.name %></h1>
-<ul>
-  <li><% @jobs.each do |job| %>
-    <%= link_to(job.name, job_path(job)) %>
-  <% end %></li>
-</ul>
+<% @jobs.each do |job|%>
+  <div class="content">
+    <div class="large-3 columns">
+      <h2 class="job_title"><%= link_to(job.name, job_path(job))%></h2>
+      <h4 class="company_title"><small><%= link_to(job.company_name, job_path(job))  %></small></h4>
+    </div>
+  </div>
+<% end %>
+<%= paginate @jobs %>

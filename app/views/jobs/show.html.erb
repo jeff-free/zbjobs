@@ -1,8 +1,21 @@
-<ul>
-  <li><%= @job.name %></li>
-  <li><%= @job.description %></li>
-  <li><%= @job.requirement %></li>
-  <li><%= @job.updated_at %></li>
-  <li><%= @job.link %></li>
-  <li><%= number_to_currency(@job.annual_salary) %></li>
-</ul>
+<h1><%= @job.name %></h1>
+<div class="content">
+  <div class="large-10 columns">
+    <h4><%= link_to(@job.company_name, company_path(@job.company_id))  %></h4>
+    <h4>工作描述：</h4>
+    <%= @job.description %>
+    <h4>工作需求：</h4>
+    <%= @job.requirement %>
+    <h4>月薪範圍：</h4>
+    <%= number_to_currency(@job.salary_from) %> ~ <%= number_to_currency(@job.salary_to) %>
+    <h4>年薪可達：</h4>
+    <%= number_to_currency(@job.annual_salary) %>
+    <h4>相關連結：</h4>
+    <%= @job.link %>
+    
+  </div>
+  <div class="large-2 columns">
+    <h5>更新時間：</h5>
+    <%= @job.updated_at %>
+  </div>  
+</div>

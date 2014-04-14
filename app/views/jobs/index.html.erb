@@ -1,8 +1,14 @@
+<h1>職缺列表</h1>
 <% @jobs.each do |job|%>
-  <div class="row">
+  <div class="content">
     <div class="large-3 columns">
-      <h3><%= link_to(job.name, job_path(job))%></h3>
-      <h3><small><%= link_to(job.company_name, job_path(job))  %></small></h3>
+      <h2 class="job_title"><%= link_to(job.name, job_path(job))%></h2>
+        <%= link_to(company_path(job.company_id)) do %>
+        <h4 class="company_title"><small>
+          <i class="fa fa-briefcase"></i>
+        </small></h4>
+        <% end %>
     </div>
   </div>
 <% end %>
+<%= paginate @jobs %>

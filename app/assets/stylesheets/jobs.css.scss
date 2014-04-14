@@ -1,3 +1,27 @@
-// Place all the styles related to the jobs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'foundation_and_overrides';
+.content{
+  background: #FFF;
+  @include grid-row();
+  border-bottom: 4px double #e0e0e0;
+  a{
+    color: black;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.pagination {
+  a span{
+    color:$sunflower_color;
+  }
+}
+h1{
+  color: $sunflower_color;
+}
+.job_title{
+  margin-bottom: 3px;
+}
+.company_title{
+  margin:3px;
+  line-height: 1;
+}

@@ -3,7 +3,7 @@ class CompaniesController < ApplicationController
   before_action :get_industries
   before_action :find_company, only: [:show, :edit, :update, :destroy]
   def show
-    @jobs = @company.jobs
+    @jobs = @company.jobs.page(params[:page]).per(5)
   end
 
   def edit
