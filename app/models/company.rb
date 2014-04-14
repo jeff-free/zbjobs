@@ -36,4 +36,8 @@ class Company < ActiveRecord::Base
       true
     end
   end
+
+  def industry_name
+    industry.name
+  end
 end

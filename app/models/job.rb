@@ -24,4 +24,8 @@ class Job < ActiveRecord::Base
   def company_name
     company.name
   end
+
+  def company_address
+    company.address
+  end
 end

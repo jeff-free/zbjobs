@@ -9,6 +9,29 @@
       text-decoration: underline;
     }
   }
+  i{
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+  .job_title{
+    margin-bottom: 0px;
+    margin-left: 0.9375rem;
+  }
+  .company_title{
+    margin:3px;
+    line-height: 1;
+  }
+  .company_address{
+    @include grid-column(
+      $columns:7
+      );
+  }
+  .job_type{
+    @include grid-column(
+      $columns:7
+      );
+  }
 }
 .pagination {
   a span{
@@ -17,11 +40,4 @@
 }
 h1{
   color: $sunflower_color;
-}
-.job_title{
-  margin-bottom: 3px;
-}
-.company_title{
-  margin:3px;
-  line-height: 1;
 }
