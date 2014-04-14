@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require 'rvm-capistrano'
+require 'rvm/capistrano'
 default_environment["PATH"] = "/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin"
 
 set :application, "zbjobs"

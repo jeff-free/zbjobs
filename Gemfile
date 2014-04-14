@@ -16,7 +16,6 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'high_voltage'
 gem "kaminari"
-gem "ckeditor"
 
 group :development do
   gem 'annotate'
@@ -40,7 +39,8 @@ end
 # gem 'unicorn'
 gem 'capistrano', '~> 2.15.5'
 gem 'capistrano-ext'
-gem "rvm-capistrano"
+gem 'rvm-capistrano'
+gem 'cape', '~> 1'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
