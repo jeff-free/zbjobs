@@ -11,13 +11,13 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-config/secrets.yml
-config/database.yml
-config/config.yml
+/config/secrets.yml
+/config/database.yml
+/config/config.yml
 
-zbjobs.sublime-project
-zbjobs.sublime-workspace
-zbjob.pem
+/zbjobs.sublime-project
+/zbjobs.sublime-workspace
+/zbjob.pem
 
 ## Environment normalisation:
 /.bundle

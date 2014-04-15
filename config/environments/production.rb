@@ -65,10 +65,17 @@ Zbjobs::Application.configure do
 
   config.action_mailer.default_url_options = { host: 'yourdomain.com'}
   config.action_mailer.delivery_method = :smtp
+  # emergency gmail doesnt send mail
   config.action_mailer.smtp_settings = {
-    address: "127.0.0.1",
-    port: 25,
-    domain: 'yourdomain.com'
+    :port  => Figaro.env.gmail_port,
+    :address => Figaro.env.gmail_address,
+    :user_name => Figaro.env.gmail_username,
+    :password => Figaro.env.gmail_password,
+    :domain => Figaro.env.gmail_domain,
+    :authentication => :plain
+  }
+  config.action_mailer.default_url_options = {
+    :host => Figaro.env.domain.sub("http://", "")
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.

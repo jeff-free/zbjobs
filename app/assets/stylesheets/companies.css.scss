@@ -5,3 +5,13 @@
     $columns:3);
   background-color: #9DDDC0;
 }
+
+h1{
+  color: $sunflower_color;
+}
+.account_canvas{
+  background: #FFF;
+  @include grid-column(
+    $columns: 12);
+  padding: 1em;
+}

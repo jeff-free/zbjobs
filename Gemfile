@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'high_voltage'
 gem 'kaminari'
+gem 'figaro'
 
 group :development do
   gem 'annotate'
