@@ -41,19 +41,6 @@
 h1{
   color: $sunflower_color;
 }
-
-#footer{
-  background-color: #A3D58D;
-  .contact_button{
-    @include button(
-      $radius: true,
-      $bg: $sunflower_color);
-    color: black;
-    &:hover{
-      color:black;
-    }
-  }
-}
 .new_job_form{
   @extend .content;
   padding: 1em;

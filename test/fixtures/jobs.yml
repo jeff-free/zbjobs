@@ -15,6 +15,7 @@
 #  salary_to     :integer
 #  annual_salary :integer
 #  how_to_apply  :text
+#  is_fulltime   :boolean
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

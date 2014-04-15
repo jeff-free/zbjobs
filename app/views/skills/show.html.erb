@@ -1,20 +1,3 @@
 <h1>專長分類:<%= @skill.name %></h1>
-<% @jobs.each do |job|%>
-  <div class="content">
-    <h2 class="job_title"><%= link_to(job.name, job_path(job))%></h2>
-    <div class="large-3 columns">
-        <%= link_to(company_path(job.company_id)) do %>
-        <h4 class="company_title"><small>
-          <i class="fa fa-briefcase"><%= job.company_name %></i>
-        </small></h4>
-        <% end %>
-    </div>
-    <div class="company_address">
-      <h4><small><%= job.company_address %></small></h4>
-    </div>
-    <div class="large-2 columns">
-      <span class="label">Not yet develop</span>
-    </div>
-  </div>
-<% end %>
+<%= render partial: "jobs/jobs_board" %>
 <%= paginate @jobs %>

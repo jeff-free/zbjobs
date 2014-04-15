@@ -2,7 +2,8 @@
 <div class="new_job_form">
   <%= simple_form_for @job do |f| %>
     <%= f.input :name, label: "工作職稱" %>
-    <%= f.input :skill, collection: @skills, label_method: :name, value_method: :id, label: "技能", include_blank: false %>
+    <%= f.input :skill_id, collection: @skills, label_method: :name, value_method: :id, label: "技能", include_blank: false %>
+    <%= f.input :is_fulltime, collection: [["實習", "0"], ["正職", "1"]], label: "職缺類別", include_blank: false %>
     <%= f.input :description, label: "工作內容" %>
     <%= f.input :requirement, label:"工作需求" %>
     <%= f.input :link, label: "相關網站" %>

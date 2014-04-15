@@ -11,7 +11,7 @@
     <h4>年薪可達：</h4>
     <%= number_to_currency(@job.annual_salary) %>
     <h4>相關連結：</h4>
-    <%= @job.link %>
+    <a href="<%= @job.link %>"><%= @job.link %></a>
     
   </div>
   <div class="large-2 columns">

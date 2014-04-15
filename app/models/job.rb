@@ -15,6 +15,7 @@
 #  salary_to     :integer
 #  annual_salary :integer
 #  how_to_apply  :text
+#  is_fulltime   :boolean
 #
 
 class Job < ActiveRecord::Base

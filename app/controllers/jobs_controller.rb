@@ -5,7 +5,7 @@ class JobsController < ApplicationController
   before_action :find_job, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_company!, only: [:create, :edit, :new, :update, :destroy]
   def index
-    @jobs = Job.page(params[:page]).per(3)
+    @jobs = Job.order("id DESC").page(params[:page]).per(10)
   end
 
   def show
@@ -37,7 +37,7 @@ class JobsController < ApplicationController
 
   def jobs_params
     params.require(:job).permit(:name, :description, :requirement, 
-      :link, :salary_from, :salary_to, :annual_salary, :how_to_apply)
+      :link, :salary_from, :salary_to, :annual_salary, :how_to_apply, :is_fulltime, :skill_id)
   end
 
 end
