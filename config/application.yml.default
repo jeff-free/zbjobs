@@ -1,0 +1,6 @@
+production:
+  gmail_address: "smtp.gmail.com"
+  gmail_port: "587"
+  gmail_domain: "gmail.com"
+  gmail_username: ""
+  gmail_password: ""
