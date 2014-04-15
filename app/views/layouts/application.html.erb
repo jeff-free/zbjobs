@@ -16,9 +16,9 @@
     <%= render partial: "layouts/topbar" %>
     <%= render 'layouts/messages' %>
     <div class="row">
-
-    <%= yield %>
+      <%= yield %>
     </div>
+    <%= render partial: "layouts/footer" %>
     <script>
       $(document).foundation();
     </script>
