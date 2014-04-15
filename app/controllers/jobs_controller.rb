@@ -21,6 +21,8 @@ class JobsController < ApplicationController
     if @job.save
       flash[:success]
       redirect_to root_path
+    else
+      render :new
     end
   end
 

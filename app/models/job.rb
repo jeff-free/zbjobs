@@ -21,7 +21,11 @@
 class Job < ActiveRecord::Base
   belongs_to :company
   belongs_to :skill
-  
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :requirement, presence: true
+  validates :how_to_apply, presence: true
+  validates :is_fulltime, presence: true
   def company_name
     company.name
   end

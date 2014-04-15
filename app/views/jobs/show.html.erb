@@ -1,7 +1,6 @@
 <h1><%= @job.name %></h1>
 <div class="job_show_canvas">
-  <div class="large-10 columns">
-    <h4>公司名稱:<br/><%= link_to(@job.company_name, company_path(@job.company_id))  %>&nbsp;<i class="fa fa-external-link"></i></h4>
+  <div class="large-9 columns">
     <h4>工作描述：</h4>
     <p><%= @job.description %></p>
     <h4>工作需求：</h4>
@@ -13,8 +12,8 @@
     <h4>相關連結：</h4>
     <a href="<%= @job.link %>"><%= @job.link %></a>
   </div>
-  <div class="large-2 columns">
-    <h5>更新時間：</h5>
-    <%= @job.updated_at.strftime("%F") %>
+  <div class="large-3 columns">
+    <h4>公司名稱:<%= link_to(@job.company_name, company_path(@job.company_id))  %>&nbsp;<i class="fa fa-external-link"></i></h4>
+    <h5>更新時間:<%= @job.updated_at.strftime("%F") %></h5>
   </div>  
 </div>
