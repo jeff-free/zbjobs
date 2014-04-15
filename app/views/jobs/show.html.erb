@@ -1,21 +1,20 @@
 <h1><%= @job.name %></h1>
-<div class="content">
+<div class="job_show_canvas">
   <div class="large-10 columns">
-    <h4><%= link_to(@job.company_name, company_path(@job.company_id))  %></h4>
+    <h4>公司名稱:<br/><%= link_to(@job.company_name, company_path(@job.company_id))  %>&nbsp;<i class="fa fa-external-link"></i></h4>
     <h4>工作描述：</h4>
-    <%= @job.description %>
+    <p><%= @job.description %></p>
     <h4>工作需求：</h4>
-    <%= @job.requirement %>
+    <p><%= @job.requirement %></p>
     <h4>月薪範圍：</h4>
-    <%= number_to_currency(@job.salary_from) %> ~ <%= number_to_currency(@job.salary_to) %>
+    <p><%= number_to_currency(@job.salary_from) %> ~ <%= number_to_currency(@job.salary_to) %></p>
     <h4>年薪可達：</h4>
-    <%= number_to_currency(@job.annual_salary) %>
+    <p><%= number_to_currency(@job.annual_salary) %></p>
     <h4>相關連結：</h4>
     <a href="<%= @job.link %>"><%= @job.link %></a>
-    
   </div>
   <div class="large-2 columns">
     <h5>更新時間：</h5>
-    <%= @job.updated_at %>
+    <%= @job.updated_at.strftime("%F") %>
   </div>  
 </div>
