@@ -9,7 +9,6 @@ class CompaniesController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
@@ -27,7 +26,9 @@ class CompaniesController < ApplicationController
 
   def is_company
     @company = current_company
-    unless params[:id] == @company.id
+    if @company.id.to_s == params[:id].to_s
+      render :edit
+    else
       redirect_to root_path
     end
   end
