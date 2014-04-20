@@ -5,7 +5,6 @@ require 'cape'
 
 set :stages, %w(staging production)
 set :default_stage, "production"
-set :ssh_options, { :forward_agent => true }
 
 Cape do
   mirror_rake_tasks :dev
