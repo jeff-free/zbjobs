@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
   before_action :get_skills
   before_action :get_industries
-  before_action :is_company, only: [:edit, :update, :destroy]
+  before_action :is_company, only: [:edit, :destroy]
 
   def show
     @company = Company.find(params[:id])
@@ -12,6 +12,7 @@ class CompaniesController < ApplicationController
   end
 
   def update
+    @company = current_company
     if @company.update(company_params)
       redirect_to root_path
     end
