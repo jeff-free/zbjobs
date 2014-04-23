@@ -17,7 +17,10 @@ class JobsController < ApplicationController
   end
 
   def create
+    
     @job = @company.jobs.new(jobs_params)
+    Rails.logger.info("remind") 
+    Rails.logger.info(@job.is_fulltime)
     if @job.save
       flash[:success]
       redirect_to root_path
