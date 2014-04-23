@@ -3,7 +3,9 @@
   <%= simple_form_for @job do |f| %>
     <%= f.input :name, required: true, label: "工作職稱" %>
     <%= f.input :skill_id, collection: @skills, label_method: :name, value_method: :id, required: true, label: "技能", include_blank: false %>
-    <%= f.input :is_fulltime, collection: [["實習", "0"], ["正職", "1"]], required: true, label: "職缺類別", include_blank: false %>
+    <%#= f.collection_radio_buttons :is_fulltime, [["0", "實習"], ["1", "正職"]], :first, :last %>
+
+    <%= f.input :is_fulltime, collection: [[ "實習", false], ["正職", true]], required: true, label: "職缺類別", include_blank: false %>
     <%= f.input :description, required: true, label: "工作內容" %>
     <%= f.input :requirement, required: true, label: "工作需求" %>
     <%= f.input :link, label: "相關網站" %>

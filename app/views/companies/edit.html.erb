@@ -4,7 +4,8 @@
     <%= f.input :name, label: "公司名稱" %>
     <%= f.input :address, label: "公司地址" %>
     <%= f.input :phone, label: "聯絡電話" %>
-    <%= f.input :industry, collection: @industries, label_method: :name, value_method: :id, label: "產業類別", include_blank: false %>
+    <%= f.association :industry, label: "產業類別", include_blank: false %>
+    <%#= f.input :industry, collection: @industries, label_method: :name, value_method: :id, label: "產業類別", include_blank: false %>
     <%= f.button :submit, "完成", class: "button right"%>
   <% end %>
 </div>

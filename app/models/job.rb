@@ -25,7 +25,6 @@ class Job < ActiveRecord::Base
   validates :description, presence: true
   validates :requirement, presence: true
   validates :how_to_apply, presence: true
-  validates :is_fulltime, presence: true
   def company_name
     company.name
   end
