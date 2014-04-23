@@ -12,6 +12,8 @@
     <p><%= number_to_currency(@job.annual_salary) %></p>
     <h4>相關連結：</h4>
     <a href="<%= @job.link %>"><%= @job.link %></a>
+    <h4>應徵方式：</h4>
+    <%= @job.how_to_apply %>
   </div>
   <div class="large-3 columns">
     <h4>公司名稱:<%= link_to(@job.company_name, company_path(@job.company_id))  %>&nbsp;<i class="fa fa-external-link"></i></h4>

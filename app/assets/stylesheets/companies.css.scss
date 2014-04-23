@@ -1,9 +1,26 @@
 @import "foundation_and_overrides";
 
+#company_opinion{
+  min-height: 6em;
+}
+
+
 .company_cover{
   @include grid-column(
-    $columns:3);
-  background-color: #A3D58D;
+    $columns:4);
+  background-color: #FFF;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  .opinion_from_company{
+    display: block;
+    // text-indent: 2em;
+    border-radius: 5px;
+    background: rgba(225,225,225,0.7);
+    padding: 1em;
+    cite{
+      float: right;
+    }
+  }
 }
 
 h1{
