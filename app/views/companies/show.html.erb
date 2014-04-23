@@ -1,11 +1,25 @@
 <div class="large-12 columns">
 <h1><%= @company.name %></h1>
   <div class="company_cover">    
-    <h5>公司地址:<%= @company.address %></h5>
-    <h5>聯絡電話:<%= @company.phone %></h5>
-    <h5>產業類別:<%= @company.industry_name %></h5>
+    <ul>
+      <li><h5>公司地址:<br/><%= @company.address %></h5></li>
+      <li><h5>聯絡電話:<br/><%= @company.phone %></h5></li>
+      <li><h5>產業類別:<br/><%= @company.industry_name %></h5></li>
+      <li><h5>給參與社運朋友的話:</h5></li>
+      <blockquote class="opinion_from_company">
+        <i class="fa fa-quote-left">&nbsp;&nbsp;</i>
+          <%= @company.opinion.html_safe %>&nbsp;
+        <i class="fa fa-quote-right"></i>
+          <cite>by <%= @company.name %></cite>
+      </blockquote>
+        
+        
+
+    </ul>
+    
+
   </div>
-  <div class="large-9 columns">
+  <div class="large-8 columns">
     <%= render partial: "jobs/jobs_board" %>
     <%= paginate @jobs %>
     </div>

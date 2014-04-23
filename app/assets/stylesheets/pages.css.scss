@@ -10,7 +10,7 @@ h1{
 
 
 #footer{
-  background-color: #A3D58D;
+  background-color: $sunflower_color;
   .contact_button{
     @include button(
       $radius: true,

@@ -21,6 +21,7 @@
 #  confirmed_at           :datetime
 #  confirmation_sent_at   :datetime
 #  unconfirmed_email      :string(255)
+#  opinion                :text
 #
 
 class Company < ActiveRecord::Base
@@ -30,6 +31,10 @@ class Company < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :industry
   has_many :jobs
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :phone, presence: true
+  validates :opinion, presence: true
 
   def check_info_done?
     if self.name.present? && self.address.present?

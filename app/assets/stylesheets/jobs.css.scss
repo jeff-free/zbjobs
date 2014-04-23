@@ -1,6 +1,7 @@
 @import 'foundation_and_overrides';
 .content{
   background: #FFF;
+  min-height: 4em;
   @include grid-row();
   border-bottom: 4px double #e0e0e0;
   a{
@@ -43,5 +44,8 @@ h1{
 }
 .job_show_canvas{
   @extend .content;
+    .large-9{
+      border-right: 2px solid #e0e0e0; 
+    }
   margin-bottom: 1em;
 }

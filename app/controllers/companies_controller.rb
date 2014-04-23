@@ -15,6 +15,8 @@ class CompaniesController < ApplicationController
     @company = current_company
     if @company.update(company_params)
       redirect_to root_path
+    else
+      render :edit
     end
   end
 
@@ -35,6 +37,6 @@ class CompaniesController < ApplicationController
   end
 
   def company_params
-    params.require(:company).permit(:name, :address, :phone, :industry_id)
+    params.require(:company).permit(:name, :address, :phone, :opinion, :industry_id)
   end
 end

@@ -5,7 +5,7 @@
     <%= f.input :address, label: "公司地址" %>
     <%= f.input :phone, label: "聯絡電話" %>
     <%= f.association :industry, label: "產業類別", include_blank: false %>
-    <%#= f.input :industry, collection: @industries, label_method: :name, value_method: :id, label: "產業類別", include_blank: false %>
+    <%= f.input :opinion, label: "給參與社運朋友的話" %>
     <%= f.button :submit, "完成", class: "button right"%>
   <% end %>
 </div>
