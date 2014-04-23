@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrationsController
+class PasswordsController < Devise::PasswordsController
   before_action :get_skills
   before_action :get_industries
 
@@ -21,5 +21,4 @@ class RegistrationsController < Devise::RegistrationsController
   def get_industries
     @industries = Industry.all
   end
-  
 end

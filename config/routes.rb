@@ -1,5 +1,5 @@
 Zbjobs::Application.routes.draw do
-  devise_for :companies, :controllers => {:registrations => "registrations", :sessions => "sessions"}
+  devise_for :companies, :controllers => {:registrations => "registrations", :sessions => "sessions", :passwords => "passwords", :confirmations => "confirmations"}
 
   resources :companies
   resources :jobs
