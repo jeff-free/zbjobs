@@ -21,7 +21,7 @@ gem 'figaro'
 group :development do
   gem 'annotate'
   gem 'letter_opener'
-  # gem 'capistrano-local-precompile', require: false
+  gem 'capistrano-local-precompile', require: false
 end
 
 # gem 'turbolinks'
