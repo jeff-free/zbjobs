@@ -30,7 +30,7 @@ class Company < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :industry
-  has_many :jobs
+  has_many :jobs, dependent: :destroy
   validates :name, presence: true
   validates :address, presence: true
   validates :phone, presence: true
