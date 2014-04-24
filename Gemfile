@@ -17,11 +17,10 @@ gem 'devise'
 gem 'high_voltage'
 gem 'kaminari'
 gem 'figaro'
-
+gem 'capistrano-local-precompile', require: false
 group :development do
   gem 'annotate'
   gem 'letter_opener'
-  gem 'capistrano-local-precompile', require: false
 end
 
 # gem 'turbolinks'
