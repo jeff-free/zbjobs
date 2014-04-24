@@ -1,5 +1,6 @@
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano' #Using bundler with Capistrano
+require 'capistrano/local_precompile'
 require 'rvm/capistrano'
 require 'cape'
 
