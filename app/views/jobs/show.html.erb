@@ -11,11 +11,13 @@
     <p><%= number_to_currency(@job.salary_from) %> ~ <%= number_to_currency(@job.salary_to) %></p>
     <% else %>
     <p>面議</p>
+    <% end %>
     <h4>年薪可達：</h4>
-    <%= if @job.annual_salary.present? %>
+    <% if @job.annual_salary.present? %>
     <p><%= number_to_currency(@job.annual_salary) %></p>
     <% else %>
     <p>面議</p>
+    <% end %>
     <h4>相關連結：</h4>
     <a href="<%= @job.link %>"><%= @job.link %></a>
     <h4>應徵方式：</h4>
