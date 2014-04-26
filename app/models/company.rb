@@ -28,13 +28,13 @@ class Company < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable
   belongs_to :industry
   has_many :jobs, dependent: :destroy
-  validates :name, presence: true
-  validates :address, presence: true
-  validates :phone, presence: true
-  validates :opinion, presence: true
+  validates :name, presence: true, on: :update
+  validates :address, presence: true, on: :update
+  validates :phone, presence: true, on: :update
+  validates :opinion, presence: true, on: :update
 
   def check_info_done?
     if self.name.present? && self.address.present?
