@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation-wysihtml5
 //= require foundation
 //= require jquery.stickyFooter.js

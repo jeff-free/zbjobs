@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'high_voltage'
 gem 'kaminari'
+gem 'foundation-wysihtml5-rails'
 gem 'figaro'
 gem 'capistrano-local-precompile', require: false
 group :development do
