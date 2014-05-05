@@ -3,9 +3,9 @@
 <div class="job_show_canvas">
   <div class="large-9 columns">
     <h4>工作描述：</h4>
-    <p><%= @job.description %></p>
+    <p><%= @job.description.html_safe %></p>
     <h4>工作需求：</h4>
-    <p><%= @job.requirement %></p>
+    <p><%= @job.requirement.html_safe %></p>
     <h4>月薪範圍：</h4>
     <% if @job.salary_from.present? && @job.salary_to.present? %>
     <p><%= number_to_currency(@job.salary_from) %> ~ <%= number_to_currency(@job.salary_to) %></p>
