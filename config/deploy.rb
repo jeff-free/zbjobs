@@ -1,6 +1,6 @@
 # require 'capistrano/ext/multistage'
 # require 'bundler/capistrano' #Using bundler with Capistrano
-# require 'capistrano/local_precompile'
+
 # require 'rvm/capistrano'
 # require 'cape'
 
@@ -13,6 +13,7 @@
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano' #Using bundler with Capistrano
 require 'rvm/capistrano'
+require 'capistrano/local_precompile'
 require 'cape'
 
 set :stages, %w(staging production)
