@@ -18,6 +18,7 @@ gem 'high_voltage'
 gem 'kaminari'
 gem 'foundation-wysihtml5-rails'
 gem 'figaro'
+gem 'google-api-client'
 gem 'capistrano-local-precompile', require: false
 group :development do
   gem 'annotate'
